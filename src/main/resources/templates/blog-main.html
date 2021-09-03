@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Main page</title>
+    <title>Blog</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
 <div class="container py-3">
-    <header th:insert="blocks/header.html::header"></header>
+    <header th:insert="blocks/header::header"></header>
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -88,7 +88,15 @@
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                <h1>Home page</h1>
+
+                <h1>Blog</h1>
+                <div th:each="el:${posts}" class="alert alert-info mt-2">
+                    <h3 th:text="${el.title}"></h3>
+                    <p th:text="${el.anons}"></p>
+                    <a th:href="'/blog/'+${el.id}">Detail...</a>
+
+                </div>
+
             </main>
         </div>
     </div>
