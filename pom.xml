@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>com.untitled</groupId>
 	<artifactId>poject</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-sssp</version>
 	<name>poject</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>13</java.version>
 	</properties>
 	<dependencies>
 
