@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PojectApplication {
 
 	public static void main(String[] args) {
+		PojectApplication.class.getAnnotations();
 		SpringApplication.run(PojectApplication.class, args);
 	}
 

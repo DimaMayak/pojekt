@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: root
+      MYSQL_DATABASE: pojectdb
+      MYSQL_ROOT_PASSWORD: 159753
+    ports:
+      - 5432:5432
+  app:
+    image: 2dcfff7114d6
+    depends_on:
+      - db
+    ports:
+      - 9090:8080
